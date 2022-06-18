@@ -1,6 +1,4 @@
 import random
-import math
-
 
 # The length of the password
 passLength = int(input('Enter an amount of letters and symbols of which your password will contain: '))
@@ -43,8 +41,22 @@ while len(passWord) < passLength:
         r = random.randint(0, len(char) - 1)
         passWord = passWord + char[r]
 
-# Simply displays out the password
-print(passWord)
 
+# Signals the start of the password and centers
+print('\n' + '#########PASSWORD STARTS#########\n'.center(50))
+
+# Variables needed for splitting the password into rows
+remainLength = len(passWord)
+multiplier = 0
+
+
+# Splits the password into a new row after every 50 characters
+while remainLength != 0:
+    print(passWord[(0 + multiplier*50):(49 + multiplier*50)])
+    remainLength -= 50
+    multiplier += 1
+
+# Signals the end of the password
+print('\n' + '##########PASSWORD ENDS##########'.center(50))
 
 
