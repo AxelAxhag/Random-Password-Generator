@@ -1,5 +1,6 @@
 import random
 
+
 # The length of the password
 passLength = int(input('Enter an amount of letters and symbols of which your password will contain: '))
 
@@ -51,14 +52,14 @@ multiplier = 0
 
 
 # Splits the password into a new row after every 50 characters
-while remainLength != 0:
-    print(passWord[(0 + multiplier*50):(49 + multiplier*50)])
+while remainLength >= 0:
+    print(passWord[(0 + multiplier*50):((49 + multiplier*50))])
     remainLength -= 50
     multiplier += 1
 
 # Signals the end of the password
 print('\n' + '##########PASSWORD ENDS##########'.center(50))
 
-# Command in order to quit the program
+# Command in order to quit 
 if input('\nIf you want to exit press ENTER') == '':
     quit()
