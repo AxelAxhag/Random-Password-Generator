@@ -59,4 +59,6 @@ while remainLength != 0:
 # Signals the end of the password
 print('\n' + '##########PASSWORD ENDS##########'.center(50))
 
-
+# Command in order to quit the program
+if input('\nIf you want to exit press ENTER') == '':
+    quit()
